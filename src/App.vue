@@ -1,6 +1,9 @@
 <script setup>
 // Cheat Sheet: https://steve-fallet.notion.site/Vue-3-script-setup-Cheat-Sheet-b12192ceae244ecda65f771579ca02bc
 import {onMounted, ref} from 'vue'
+import PageTopBarre from "@/components/PageTopBarre.vue";
+import PageHeader from "@/components/PageHeader.vue";
+import PageFooter from "@/components/PageFooter.vue";
 
 // Tableau des troupes
 const troupes = ref([])
@@ -16,24 +19,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <aside class="solde-or">
-    <div>
-      <img src="/img/piece-or-note.jpg" alt="Solde Or">
-      20 000 pièces d'or
-    </div>
-    <div>
-      <img src="/img/troupes-icon.png" alt="Troupes">
-      0 troupes formées
-    </div>
-  </aside>
+<PageTopBarre/>
   <header>
-    <h1>
-      <img src="/img/clash-of-clans-logo.webp" alt="Logo Clash of Clans">
-    </h1>
-    <p class="description">
-      Construire un village,
-      former un clan et participer à des guerres de clans épiques !
-    </p>
+    <PageHeader/>
   </header>
   <main>
     <ul class="cartes">
@@ -73,9 +61,10 @@ onMounted(() => {
     </ul>
   </main>
   <footer>
-    &copy; 2023 - Supercell.com
+    <PageFooter/>
   </footer>
 </template>
 
 <style scoped lang="sass">
+
 </style>
