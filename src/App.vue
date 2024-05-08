@@ -64,34 +64,32 @@ const troupes = ref([
     <ul class="cartes">
       <li v-for="troupe in troupes" :key="troupe">
         <article>
-          <header style="background: linear-gradient(60deg,#3B3B3B 0%, #EE5487 100%);">
-            <img src="https://cocapi.divtec.me/img/archer.png"
-                 alt="Archer">
+          <header :style="'background: linear-gradient(60deg,#3B3B3B 0%, ' + troupe.couleur + ' 100%);'">
+            <img :src="troupe.image"
+                 :alt="troupe.nom">
           </header>
-          <div class="level" style="color: #EE5487;">
-            Niveau 3
+          <div class="level" :style="'color: ' + troupe.couleur + ';'">
+            Niveau {{troupe.niveau}}
           </div>
-          <h2 class="name">Archer</h2>
+          <h2 class="name">{{ troupe.nom }}</h2>
           <button style="background-color: #EE5487;"> Former
             <img src="/img/piece-or.png" alt="Former"></button>
-          <p class="description">Les archers sont des tireurs d'élite
-            qui attaquent à distance. Ils sont rapides et bon marché
-            à former, mais ils sont faibles en mêlée et doivent être
-            protégés.</p>
+          <p class="description">
+            {{troupe.description}}</p>
           <footer>
             <div class="training"
-                 style="background-color: #EE5487;">
-              <div>25<sup>sec</sup></div>
+                 :style="'background-color: ' + troupe.couleur + ';'">
+              <div>{{troupe.formation}}<sup>sec</sup></div>
               <div>Formation</div>
             </div>
             <div class="speed"
-                 style="background-color: #EE5487;">
-              <div>24</div>
+                 :style="'background-color: ' + troupe.couleur + ';'">
+              <div>{{troupe.vitesse}}</div>
               <div>Vitesse</div>
             </div>
             <div class="cost"
-                 style="background-color: #EE5487;">
-              <div>200</div>
+                 :style="'background-color: ' + troupe.couleur + ';'">
+              <div>{{troupe.cout}}</div>
               <div>Coût</div>
             </div>
           </footer>
