@@ -3,6 +3,10 @@
     or: { //Nom de la propriété
       type: Number, //Type de la propriété
       required: true //Propriété obligatoire
+    },
+    troupeFormees: {
+      type: Number,
+      required: true
     }
 })
   //console.log(props.or);
@@ -17,7 +21,8 @@
     </div>
     <div>
       <img src="/img/troupes-icon.png" alt="Troupes">
-      0 troupes formées
+       {{troupeFormees.toLocaleString()}}
+      troupes formées
     </div>
   </aside>
 </template>
