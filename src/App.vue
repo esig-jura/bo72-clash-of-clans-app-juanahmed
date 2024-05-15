@@ -38,6 +38,7 @@ function formerTroupe(troupe) {
 </script>
 
 <template>
+  <router-view/>
 <PageTopBarre :or="totalOr" :troupe-formees="troupesFormees"/>
     <PageHeader/>
   <main>

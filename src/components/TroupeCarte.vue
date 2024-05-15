@@ -30,7 +30,11 @@ const emit = defineEmits(["former"]);
             @click="emit('former',troupe)"
             :disabled="or < troupe.cout">
       Former
-      <img src="/img/piece-or.png" alt="Former"></button>
+      <img src="/img/piece-or.png" alt="Former">
+    </button>
+      <router-link :to="{ name: 'fiche-troupe', params: { id: troupe.id}}">
+        <button>Voir fiche de détail</button>
+      </router-link>
     <p class="description">
       {{troupe.description}}</p>
     <footer>
