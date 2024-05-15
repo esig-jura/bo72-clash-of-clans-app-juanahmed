@@ -23,9 +23,7 @@ onMounted(() => {
 
 <template>
 <PageTopBarre :or="totalOr"/>
-  <header>
     <PageHeader/>
-  </header>
   <main>
     <ul class="cartes">
       <li v-for="troupe in troupes" :key="troupe">
@@ -63,9 +61,7 @@ onMounted(() => {
       </li>
     </ul>
   </main>
-  <footer>
     <PageFooter/>
-  </footer>
 </template>
 
 <style scoped lang="sass">

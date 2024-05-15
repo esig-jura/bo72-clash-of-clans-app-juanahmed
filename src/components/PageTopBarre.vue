@@ -1,10 +1,11 @@
 <script setup>
-  defineProps({
-  or: { //Nom de la propriété
-  type: Number, //Type de la propriété
-  required: true //Propriété obligatoire
-}
+  const props = defineProps({
+    or: { //Nom de la propriété
+      type: Number, //Type de la propriété
+      required: true //Propriété obligatoire
+    }
 })
+  //console.log(props.or);
 </script>
 
 <template>
