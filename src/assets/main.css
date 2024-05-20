@@ -86,70 +86,7 @@ button[disabled] img {
   filter: grayscale(100%);
 }
 
-aside {
-  position: fixed;
-  width: 100%;
-  background: white;
-  color: #3B3B3B;
-  font-size: 1.25rem;
-  padding: .5rem;
-  z-index: 9999;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1em;
-}
 
-.solde-or img {
-  max-height: 3rem;
-  vertical-align: middle;
-}
-
-
-header {
-  padding: 80px 0 20px;
-  text-align: center;
-}
-
-header h1 img {
-  max-height: 150px;
-}
-
-header h1,
-header .description {
-  font-size: 3.25rem;
-  color: white;
-  text-shadow: 1px 1px 2px black; /* offset-x | offset-y | blur-radius | color */
-}
-
-header  h1 {
-  margin: 0;
-}
-
-header .description {
-  font-size: 1.5rem;
-  line-height: 1.25;
-  max-width: 640px;
-  margin: 0 auto 1em;
-}
-
-/*** Footer ***/
-main + footer {
-  position: fixed;
-  z-index: 999;
-  bottom: 0;
-  height: 60px;
-  width: 100%;
-  background-color: black;
-  text-align: center;
-  padding: 1rem;
-  margin: 0;
-}
-
-main + footer a {
-  color: white;
-}
 
 /*** Liste des cartes ***/
 ul.cartes {
